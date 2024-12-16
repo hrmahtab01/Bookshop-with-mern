@@ -1,16 +1,22 @@
-import React from 'react'
-import Navbar from './Components/Navbar'
-import Banner from './Components/Banner'
-import Footer from './Components/Footer'
+import React from "react";
+import Home from "./Page/Home";
+import { BrowserRouter, Route, Routes } from "react-router";
+import Courses from "./Components/Courses";
+import Layout from "./Components/Layout";
 
 const App = () => {
   return (
-   <div>
-    <Navbar/>
-    <Banner/>
-    <Footer/>
-   </div>
-  )
-}
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/courses" element={<Courses />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+};
 
-export default App
+export default App;

@@ -5,9 +5,11 @@ const Navbar = () => {
   const navdata = [
     {
       name: "Home",
+      href :"/"
     },
     {
       name: "Course",
+      href :"/courses"
     },
     {
       name: "Contact",
@@ -18,7 +20,7 @@ const Navbar = () => {
   ];
   return (
     <>
-      <div className="sticky top-0 md:px-20 px-4 shadow-md shadow-teal-300/20">
+      <div className="sticky top-0 md:px-20 px-4 z-50 shadow-md shadow-teal-300/20">
         <div className="navbar bg-base-100">
           <div className="navbar-start">
             <div className="dropdown">
@@ -49,7 +51,7 @@ const Navbar = () => {
                 {navdata.map((item) => {
                   return (
                     <li key={item.name}>
-                      <a>{item.name}</a>
+                      <a href={item.href}>{item.name}</a>
                     </li>
                   );
                 })}
