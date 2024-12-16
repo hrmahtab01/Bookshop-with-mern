@@ -78,8 +78,8 @@ const Navbar = () => {
               <div className=" w-full max-w-xs relative">
                 <input
                   type="text"
-                  placeholder="Type here"
-                  className="input input-bordered input-primary text-lg  "
+                  placeholder="Search..."
+                  className="input border input-primary text-lg  "
                 />
                 <CiSearch className="text-2xl absolute top-[50%] right-[10px] translate-y-[-50%]" />
               </div>

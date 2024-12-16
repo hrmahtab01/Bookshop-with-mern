@@ -1,9 +1,10 @@
 import React from "react";
+import bannerimage from "../assets/banner.jpg"
 
 const Banner = () => {
   return (
     <>
-      <div className="flex md:px-20 px-4 mt-[90px]">
+      <div className="flex md:px-20 px-4 mt-[90px] gap-10  ">
         <div className="w-1/2 ">
           <h1 className="text-4xl font-bold font-sans w-[500px] leading-relaxed">
             Hello,Welcomes to here learn something{" "}
@@ -34,7 +35,8 @@ const Banner = () => {
             Secondary
           </button>
         </div>
-        <div className="w-1/2 ">right</div>
+        <div className="w-1/2 ">
+          <img className="w-[600px] h-[450px] object-cover rounded-md" src={bannerimage} alt="bannerimage" /></div>
       </div>
     </>
   );
