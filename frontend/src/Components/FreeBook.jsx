@@ -45,12 +45,12 @@ const FreeBook = () => {
 
   return (
     <>
-      <div className="py-10 bg-white mt-10 md:mx-20 mx-4 px-2">
+      <div className="py-10 bg-white dark:bg-black  mt-10 md:mx-20 mx-4 px-2">
         <div>
-          <h2 className="text-xl font-bold font-sans  text-black">
+          <h2 className="text-xl font-bold font-sans  text-black dark:text-white">
             free offered courses
           </h2>
-          <p className="text-base font-semibold font-sans text-black mt-2">
+          <p className="text-base font-semibold font-sans text-black mt-2 dark:text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
             placeat totam rem aspernatur? Vitae, cumque.
           </p>

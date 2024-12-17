@@ -3,7 +3,7 @@ import React from "react";
 const Card = ({ item , key}) => {
   return (
     <div>
-      <div key={key} className="card bg-base-100 w-96 shadow-xl hover:scale-110 duration-500">
+      <div key={key} className="card bg-base-100 w-96 shadow-xl hover:scale-110 duration-500 ">
         <figure>
           <img
             src={item.image}
@@ -11,7 +11,7 @@ const Card = ({ item , key}) => {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">
+          <h2 className="card-title ">
             {item.name}
             <div className="badge badge-secondary">{item.category}</div>
           </h2>
