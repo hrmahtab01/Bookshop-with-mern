@@ -1,13 +1,29 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
   const [email, Setemail] = useState("");
   const [password, Setpassword] = useState("");
+  const navigate = useNavigate();
 
-  let HandleLogin = () => {
+  let HandleLogin = async () => {
     if (email && password) {
-      console.log("login successfully");
+      await axios
+        .post("http://localhost:8080/api/user/login", { email, password })
+        .then((res) => {
+          console.log(res.data);
+
+          if (res.data.message === "login successfully") {
+            localStorage.setItem("token", res.data.token);
+            navigate("/");
+          } else {
+            console.log("something went wrong in user credentials");
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
   };
 

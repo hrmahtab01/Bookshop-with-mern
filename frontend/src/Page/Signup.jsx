@@ -1,15 +1,29 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
-  const { name, Setname } = useState("");
-  const { email, Setemail } = useState("");
+  const [name, Setname] = useState("");
+  const [email, Setemail] = useState("");
   const [password, Setpassword] = useState("");
   const [showpassword, Setshowpassword] = useState(false);
+  const navigate = useNavigate();
 
-  let HandleRegister = () => {
+  let HandleRegister = async () => {
     if (name && email && password) {
-      console.log("register successfully");
+      let user = axios
+        .post("http://localhost:8080/api/user/register", {
+          name,
+          email,
+          password,
+        })
+        .then((result) => {
+          navigate("/login")
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
   };
 

@@ -12,6 +12,6 @@ app.use(router)
 
 const port = process.env.Port
 
-app.listen(port ||3300, () => {
+app.listen(port, () => {
   console.log(`server is running on port ${port}` );
 });
